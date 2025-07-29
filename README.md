@@ -17,7 +17,7 @@ pip install -r requirements.txt
 ## Implementation
 For a cleaner (revised) version of the code, please refer to the ```src/context_experiments.ipynb``` notebook, which shows how to run a simple experiment on the IMPLI dataset. You can choose to toggle whether to remove context, shuffle the context, or keep the original samples for evaluation. The methods can be found in the corresponding utility file ```src/context_utils.py```. Note that in this version, only experiments with the IMPLI dataset have been tested (i.e. you may encounter bugs when utilizing the utility methods for the FigurativeNarrativeBenchmark dataset). 
 
-Please refer to the ```src/raw_code.ipynb``` notebook file if you want the complete and original implementation of all of our experiments. Note that regardless of the implementation you run, you will need to replace directory paths for models, tokenizers, and datasets to point to point to the correct locations.
+Please refer to the ```src/raw_code.ipynb``` notebook file if you want the complete and original implementation of all of our experiments. Note that regardless of the implementation you run, you will need to replace directory paths for models, tokenizers, and datasets to point to the correct locations.
 
 Our code was ran on the Della high performance computing cluster at Princeton University, with GPU access to a single Nvidia A100 (80 GB of VRAM memory). If you need to run the code without GPU access, please set the ```TrainingArguments``` parameter ```fp16=False```. If running on the Della server, our notebook code can be run using a Jupyter session, and declaring the following slurm commands (for GPU access):
 
